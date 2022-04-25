@@ -32,7 +32,7 @@ infix fun Int.x(y: Int) = Vector2(this.toFloat(), y.toFloat())
 fun Vector2.offset(x: Float = 0f, y: Float = 0f): Vector2 = this.x + x x this.y + y
 
 fun pointerWithinSquare(pos: Vector2, size: Vector2): Boolean {
-    val (px, py) = scaledPointer()
+    val (px, py) = scaledPointer().dw()
     val (x, y) = pos
     val (sx, sy) = size
     return x <= px && x + sx >= px && y <= py && y + sy >= py

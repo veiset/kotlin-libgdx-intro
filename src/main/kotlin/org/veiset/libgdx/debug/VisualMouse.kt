@@ -20,7 +20,7 @@ class VisualMouse {
     fun draw() {
         val (x, y) = scaledPointer()
         spriteBatch.use {
-            font.draw(spriteBatch, "${x * SCALE}, ${y * SCALE}", (x * SCALE) + 20f, (y * SCALE))
+            font.draw(spriteBatch, "${(x * SCALE).toInt()}, ${(y * SCALE).toInt()}", (x * SCALE) + 20f, (y * SCALE))
             font.draw(spriteBatch, "(${x.round(2)}, ${y.round(2)})", (x * SCALE) + 20f, (y * SCALE) - 22f)
         }
         shapeRenderer.use(ShapeRenderer.ShapeType.Filled) {
