@@ -18,7 +18,7 @@ object EngineConfig {
 }
 
 val config = LwjglApplicationConfiguration().apply {
-    title = "Bleak Aether"
+    title = "kotlin libgdx intro"
     width = EngineConfig.width
     height = EngineConfig.height
     foregroundFPS = 60
