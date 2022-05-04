@@ -39,8 +39,8 @@ class FPSCounter {
             font.draw(
                 it,
                 "$dt dt - $fps fps",
-                0.03f * EngineConfig.SCALE,
-                (EngineConfig.gameHeight - 0.03f) * EngineConfig.SCALE
+                5f ,
+                (EngineConfig.VIEWPORT_HEIGHT - 5f)
             )
         }
     }

@@ -23,7 +23,7 @@ fun scaledPointer(): Vector2 {
     val rx = x + cx - (gameWidth / 2f) * camera.zoom
     val ry = y + cy - (gameHeight / 2f) * camera.zoom
 
-    return (rx x ry).gfxToWorld()
+    return (rx x ry)
 }
 
 private fun basePointer(zoom: Float = 1f): Vector2 {
