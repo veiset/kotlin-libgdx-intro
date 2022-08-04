@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.6.20"
+    kotlin("jvm") version "1.7.10"
 }
 
 group = "org.veiset.libgdx"
@@ -9,8 +9,8 @@ repositories {
     mavenCentral()
 }
 
-val gdxVersion = "1.10.0"
-val ktxVersion = "1.10.0-rc2"
+val gdxVersion = "1.11.0"
+val ktxVersion = "1.11.0-rc2"
 val kotlinVersion = "1.6.10"
 
 dependencies {
