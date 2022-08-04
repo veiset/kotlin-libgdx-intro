@@ -49,7 +49,7 @@ class DodgeFallingSqueres: AppModule {
     /**
      * Here we will implement logic for spawning new blocks that the player
      * has to dodge. The blocks should start at top of the screen at a random
-     * X-coordinate. The the blocks should be added to the list `blocksToDodge`.
+     * X-coordinate. The blocks should be added to the list `blocksToDodge`.
      */
     private fun spawnNewBlock() {
 
