@@ -24,6 +24,14 @@ class DodgeFallingSqueres: AppModule {
     private var blocksToDodge: List<Rectangle> = emptyList()
 
     /**
+     * This function should draw the player in the current position on the screen.
+     * Use the utility method `drawRectangle` to draw on the screen.
+     */
+    private fun drawPlayer() {
+
+    }
+
+    /**
      * In this method we will implement player movement.
      * You can check for keypresses using `Gdx.input.isKeyPressed`
      * for instance you can check for UP-arrow: `Gdx.input.isKeyPressed(Input.Keys.UP)`.
@@ -56,6 +64,14 @@ class DodgeFallingSqueres: AppModule {
     }
 
     /**
+     * This function should draw all the blocks the player has to dodge on the screen.
+     * Use the utility method `drawRectangle` to draw on the screen.
+     */
+    private fun drawAllBlocksToDodge() {
+
+    }
+
+    /**
      * Moves all the blocks in `blocksToDodge` list. This method should also remove
      * blocks that are out of bounds (below the screen) from the list to free up the
      * resources.
@@ -64,14 +80,6 @@ class DodgeFallingSqueres: AppModule {
      * not dependant of the update-rate.
      */
     private fun handleMoveBlocks(delta: Float) {
-
-    }
-
-    /**
-     * Removes all the blocks that are out of bounds. Since the blocks start at the top
-     * and fall downwards we can remove any blocks that are below the screen.
-     */
-    private fun removeBlocksOutOfBounds() {
 
     }
 
@@ -87,18 +95,10 @@ class DodgeFallingSqueres: AppModule {
     }
 
     /**
-     * This function should draw the player in the current position on the screen.
-     * Use the utility method `drawRectangle` to draw on the screen.
+     * Removes all the blocks that are out of bounds. Since the blocks start at the top
+     * and fall downwards we can remove any blocks that are below the screen.
      */
-    private fun drawPlayer() {
-
-    }
-
-    /**
-     * This function should draw all the blocks the player has to dodge on the screen.
-     * Use the utility method `drawRectangle` to draw on the screen.
-     */
-    private fun drawAllBlocksToDodge() {
+    private fun removeBlocksOutOfBounds() {
 
     }
 
