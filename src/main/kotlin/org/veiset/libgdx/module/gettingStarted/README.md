@@ -50,13 +50,13 @@ For at det skal bli et spill må det noe mer gameplay på plass. Så her er tank
 skal ha noen bokser på starter på toppen av skjermen og "faller" nedover, og så er målet
 å unngå å bli truffet av disse. For å få dette på plass må følgende ting implementeres:
 
- * `drawAllBlocksToDodge`: Denne skal tegne alle blokkene som ligger i `this.blocksToDodge`.
-    Dette kan gjøres ganske likt som tegning av spilleren. Men bruk gjerne en annen farge.
  * `shouldSpawnNewBlocks`: Denne metoden skal returnere true om det skal lages flere blokker
     for spilleren å unngå.
  * `spawnNewBlock` Her skal den lage ny blokk(er). De nye blokkene skal ha en posisjon på
-    toppen av skjermen, og et tilfeldig X-koordinat. Den nye blokken skal legges i listen 
-    `blocksToDodge`.
+    toppen av skjermen, og et tilfeldig X-koordinat. Den nye blokken skal legges i listen
+   `blocksToDodge`.
+ * `drawAllBlocksToDodge`: Denne skal tegne alle blokkene som ligger i `this.blocksToDodge`.
+    Dette kan gjøres ganske likt som tegning av spilleren. Men bruk gjerne en annen farge.
  * `handleMoveBlocks`: Her flytter man blokkene nedover på skjermen. I starten er det greit
     å bare flytte de med en konstant fart.
 
