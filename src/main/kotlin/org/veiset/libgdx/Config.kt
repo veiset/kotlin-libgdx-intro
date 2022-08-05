@@ -1,10 +1,8 @@
 package org.veiset.libgdx
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration
 
 object EngineConfig {
-
     const val VIEWPORT_WIDTH = 1920f
     const val VIEWPORT_HEIGHT = 1080f
 
@@ -24,17 +22,3 @@ val config = LwjglApplicationConfiguration().apply {
     audioDeviceBufferSize = 1024
     audioDeviceSimultaneousSources = 64
 }
-
-fun main(vararg args: String) {
-    LwjglApplication(AppRunner { SimpleTestModule() }, config)
-}
-
-class SimpleTestModule : AppModule {
-
-    override fun update(delta: Float) {
-    }
-
-    override fun draw(delta: Float) {
-    }
-}
-

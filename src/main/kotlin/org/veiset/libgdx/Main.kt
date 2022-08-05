@@ -1,4 +1,4 @@
-package org.veiset.libgdx.module.gettingStarted
+package org.veiset.libgdx
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.graphics.Color
@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.utils.TimeUtils
 import ktx.graphics.rect
 import ktx.graphics.use
-import org.veiset.libgdx.*
 import org.veiset.libgdx.utils.Rectangle
 import org.veiset.libgdx.utils.x
 
@@ -72,9 +71,7 @@ class DodgeFallingSqueres: AppModule {
     }
 
     /**
-     * Moves all the blocks in `blocksToDodge` list. This method should also remove
-     * blocks that are out of bounds (below the screen) from the list to free up the
-     * resources.
+     * Moves all the blocks in `blocksToDodge` list.
      *
      * @param delta The time since last update. This is used to make the movement-speed
      * not dependant of the update-rate.

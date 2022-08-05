@@ -1,4 +1,4 @@
-package org.veiset.libgdx.module.gettingStarted.solution
+package org.veiset.libgdx.solution
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
@@ -86,9 +86,7 @@ class DodgeFallingSqueresSolution: AppModule {
     }
 
     /**
-     * Moves all the blocks in `blocksToDodge` list. This method should also remove
-     * blocks that are out of bounds (below the screen) from the list to free up the
-     * resources.
+     * Moves all the blocks in `blocksToDodge` list.
      *
      * @param delta The time since last update. This is used to make the movement-speed
      * not dependant of the update-rate.

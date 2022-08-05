@@ -1,4 +1,4 @@
-package org.veiset.libgdx.module.example
+package org.veiset.libgdx.examples
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
