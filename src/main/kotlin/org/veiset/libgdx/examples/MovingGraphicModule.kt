@@ -1,4 +1,4 @@
-package org.veiset.libgdx.module.example
+package org.veiset.libgdx.examples
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.graphics.Color
