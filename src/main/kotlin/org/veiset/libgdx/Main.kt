@@ -57,6 +57,9 @@ class DodgeFallingSqueres: AppModule {
      * Here we will implement logic for spawning new blocks that the player
      * has to dodge. The blocks should start at top of the screen at a random
      * X-coordinate. The blocks should be added to the list `blocksToDodge`.
+     *
+     * Keep in mind that most things (like lists) are immutable in Kotlin. So we
+     * can't actually add anything to the list. Instead we want to make a new list.
      */
     private fun spawnNewBlock() {
 
