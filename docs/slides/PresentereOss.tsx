@@ -1,6 +1,5 @@
 import React from 'react';
-import { SlideLayout, Text, FlexBox, Image } from 'spectacle';
-import { simpleTransition } from './common';
+import { SlideLayout, Text, FlexBox, Image, fadeTransition } from 'spectacle';
 import vegardPNG from './bilder/vegard.png';
 import steffenPNG from './bilder/steffen.png';
 
@@ -25,7 +24,7 @@ const OmPerson = ({ navn, bildeUrl }: OmPersonProps) => (
 );
 
 export const PresentereOss = () => (
-    <SlideLayout.Full transition={simpleTransition}>
+    <SlideLayout.Full transition={fadeTransition}>
         <FlexBox
             flexDirection="row"
             height="100%"

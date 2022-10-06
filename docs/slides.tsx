@@ -4,6 +4,7 @@ import './fonts/fonts.css';
 import { Deck } from 'spectacle';
 import { TitleSplash } from './slides/TitleSplash';
 import { PresentereOss } from './slides/PresentereOss';
+import { KortOmLibGDX } from './slides/KortOmLibGDX';
 
 const theme = {
     fonts: {
@@ -21,6 +22,7 @@ const Presentation = () => (
     <Deck theme={theme}>
         <TitleSplash />
         <PresentereOss />
+        <KortOmLibGDX />
     </Deck>
 );
 

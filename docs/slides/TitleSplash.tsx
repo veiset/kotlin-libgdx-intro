@@ -1,9 +1,8 @@
 import React from 'react';
-import { Heading, SlideLayout, Text } from 'spectacle';
-import { simpleTransition } from './common';
+import { fadeTransition, Heading, SlideLayout } from 'spectacle';
 
 export const TitleSplash = () => (
-    <SlideLayout.Center transition={simpleTransition}>
+    <SlideLayout.Center transition={fadeTransition}>
         <Heading fontWeight="300" fontSize="100px">
             Introduksjon til spillutvikling med Kotlin
         </Heading>
