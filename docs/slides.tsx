@@ -1,10 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './fonts/fonts.css';
 import { Deck } from 'spectacle';
 import { TitleSplash } from './slides/TitleSplash';
 import { PresentereOss } from './slides/PresentereOss';
 import { KortOmLibGDX } from './slides/KortOmLibGDX';
+import { IntroMainLoop } from './slides/IntroMainLoop';
+import { LinkTilKoden } from './slides/LinkTilKoden';
+import { KotlinTips } from './slides/KotlinTips';
+import { ProblemM1Mac } from './slides/ProblemM1Mac';
 
 const theme = {
     fonts: {
@@ -18,13 +21,14 @@ const theme = {
     },
 };
 
-const Presentation = () => (
+export const Presentation = () => (
     <Deck theme={theme}>
         <TitleSplash />
         <PresentereOss />
         <KortOmLibGDX />
+        <IntroMainLoop />
+        <KotlinTips />
+        <ProblemM1Mac />
+        <LinkTilKoden />
     </Deck>
 );
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Presentation />);
