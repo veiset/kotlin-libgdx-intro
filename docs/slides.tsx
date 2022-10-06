@@ -8,6 +8,7 @@ import { IntroMainLoop } from './slides/IntroMainLoop';
 import { LinkTilKoden } from './slides/LinkTilKoden';
 import { KotlinTips } from './slides/KotlinTips';
 import { ProblemM1Mac } from './slides/ProblemM1Mac';
+import { SpilletViSkalLage } from './slides/SpilletViSkalLage';
 
 const theme = {
     fonts: {
@@ -25,6 +26,7 @@ export const Presentation = () => (
     <Deck theme={theme}>
         <TitleSplash />
         <PresentereOss />
+        <SpilletViSkalLage />
         <KortOmLibGDX />
         <IntroMainLoop />
         <KotlinTips />
