@@ -14,6 +14,7 @@ import {
 } from './slides/KotlinTips';
 import { ProblemM1Mac } from './slides/ProblemM1Mac';
 import { SpilletViSkalLage } from './slides/SpilletViSkalLage';
+import { Demo } from './slides/Demo';
 
 const theme = {
     fonts: {
@@ -32,6 +33,7 @@ export const Presentation = () => (
         <TitleSplash />
         <PresentereOss />
         <SpilletViSkalLage />
+        <Demo />
         <KortOmLibGDX />
         <IntroMainLoop />
         <KotlinTips />
