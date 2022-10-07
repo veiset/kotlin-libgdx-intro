@@ -10,7 +10,7 @@ jobs:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     env:
-      BASE_URL: https://etse.github.io/kotlin-libgdx-intro/
+      BASE_URL: /kotlin-libgdx-intro/
     defaults:
       run:
         working-directory: docs
