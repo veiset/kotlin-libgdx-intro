@@ -6,7 +6,12 @@ import { PresentereOss } from './slides/PresentereOss';
 import { KortOmLibGDX } from './slides/KortOmLibGDX';
 import { IntroMainLoop } from './slides/IntroMainLoop';
 import { LinkTilKoden } from './slides/LinkTilKoden';
-import { KotlinTips } from './slides/KotlinTips';
+import {
+    KotlinExtensionFunctions,
+    KotlinImmutability,
+    KotlinImperativVsFunksjonelt,
+    KotlinTips,
+} from './slides/KotlinTips';
 import { ProblemM1Mac } from './slides/ProblemM1Mac';
 import { SpilletViSkalLage } from './slides/SpilletViSkalLage';
 
@@ -30,6 +35,9 @@ export const Presentation = () => (
         <KortOmLibGDX />
         <IntroMainLoop />
         <KotlinTips />
+        <KotlinImmutability />
+        <KotlinImperativVsFunksjonelt />
+        <KotlinExtensionFunctions />
         <ProblemM1Mac />
         <LinkTilKoden />
     </Deck>

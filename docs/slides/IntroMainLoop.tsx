@@ -1,6 +1,6 @@
 import React from 'react';
 import { SlideLayout, fadeTransition, CodePane, Heading } from 'spectacle';
-import code from './code-examples/simple-module.kt?raw';
+import code from './code-examples/simple-module.kts?raw';
 
 export const IntroMainLoop = () => (
     <SlideLayout.Full transition={fadeTransition}>
