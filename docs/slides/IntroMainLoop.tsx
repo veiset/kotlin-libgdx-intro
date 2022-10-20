@@ -18,6 +18,7 @@ export const IntroMainLoop = () => (
         <Notes>
             <Text>FixedUpdate vs Delta/dynamisk</Text>
             <Text>Gamle spill er ofte cpu-bound fixedUpdate: Sleep regne ut med delta</Text>
+            <Text>I update kjører man gjerne fysikk, og draw brukes til å tegne</Text>
         </Notes>
     </SlideLayout.Full>
 );
