@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideLayout, fadeTransition, CodePane, Heading } from 'spectacle';
+import {SlideLayout, fadeTransition, CodePane, Heading, Notes, Text} from 'spectacle';
 import code from './code-examples/simple-module.kts?raw';
 
 export const IntroMainLoop = () => (
@@ -15,5 +15,9 @@ export const IntroMainLoop = () => (
         >
             {code}
         </CodePane>
+        <Notes>
+            <Text>FixedUpdate vs Delta/dynamisk</Text>
+            <Text>Gamle spill er ofte cpu-bound fixedUpdate: Sleep regne ut med delta</Text>
+        </Notes>
     </SlideLayout.Full>
 );
