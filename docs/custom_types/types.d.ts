@@ -8,7 +8,7 @@ declare module '*.gif' {
     export = value;
 }
 
-declare module '*.kts?raw' {
+declare module '*?raw' {
     const value: string;
     export = value;
 }

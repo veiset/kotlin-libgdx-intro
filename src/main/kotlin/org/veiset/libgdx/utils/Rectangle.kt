@@ -3,8 +3,8 @@ package org.veiset.libgdx.utils
 import com.badlogic.gdx.math.Vector2
 
 data class Rectangle(
-    val position: Vector2,
-    val size: Vector2
+    var position: Vector2,
+    var size: Vector2
 ) {
     /**
      * Moved the rectangle with the given vector. This method does not mutate

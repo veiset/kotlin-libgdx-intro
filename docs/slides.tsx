@@ -12,9 +12,15 @@ import {
     KotlinImperativVsFunksjonelt,
     KotlinTips,
 } from './slides/KotlinTips';
-import { ProblemM1Mac } from './slides/ProblemM1Mac';
 import { SpilletViSkalLage } from './slides/SpilletViSkalLage';
 import { Demo } from './slides/Demo';
+import {HvaErKotlin} from "./slides/kotlin/HvaErKotlin";
+import {Kotlin00VsJava} from "./slides/kotlin/Kotlin00VsJava";
+import {Kotlin01Functions} from "./slides/kotlin/Kotlin01Functions";
+import {Kotlin02NamedArguments} from "./slides/kotlin/Kotlin02NamedArguments";
+import {Kotlin03Lambdas} from "./slides/kotlin/Kotlin03Lambdas";
+import {Kotlin04Lists} from "./slides/kotlin/Kotlin04Lists";
+import {Kotlin05Immutability} from "./slides/kotlin/Kotlin05Immutability";
 
 const theme = {
     fonts: {
@@ -34,13 +40,18 @@ export const Presentation = () => (
         <PresentereOss />
         <SpilletViSkalLage />
         <Demo />
-        <KortOmLibGDX />
         <IntroMainLoop />
-        <KotlinTips />
-        <KotlinImmutability />
-        <KotlinImperativVsFunksjonelt />
-        <KotlinExtensionFunctions />
-        <ProblemM1Mac />
+
+        <HvaErKotlin />
+
+        <Kotlin00VsJava />
+        <Kotlin01Functions />
+        <Kotlin02NamedArguments />
+        <Kotlin03Lambdas />
+        <Kotlin04Lists />
+        <Kotlin05Immutability />
+
+        <KortOmLibGDX />
         <LinkTilKoden />
     </Deck>
 );

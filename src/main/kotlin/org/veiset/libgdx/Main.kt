@@ -3,6 +3,7 @@ package org.veiset.libgdx
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.utils.TimeUtils
 import ktx.graphics.rect
 import ktx.graphics.use
@@ -17,8 +18,8 @@ class DodgeFallingSqueres: AppModule {
     private val shapeRenderer = globals.shapeRenderer
     private var lastBlockSpawnTime = TimeUtils.millis()
     private var player = Rectangle(
-        position = EngineConfig.width / 2 x 200,
-        size = 20 x 20
+        position = Vector2(EngineConfig.width / 2f, 200f),
+        size = Vector2(20f, 20f)
     )
     private var blocksToDodge: List<Rectangle> = emptyList()
 
@@ -109,8 +110,8 @@ class DodgeFallingSqueres: AppModule {
      */
     private fun onGameLost() {
         player = Rectangle(
-            position = EngineConfig.width / 2 x 200,
-            size = 20 x 20
+            position = Vector2(EngineConfig.width / 2f, 200f),
+            size = Vector2(20f, 20f)
         )
         blocksToDodge = emptyList()
     }
