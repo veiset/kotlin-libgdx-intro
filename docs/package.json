@@ -10,6 +10,8 @@
   "author": "Steffen Hageland",
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "spectacle": "^9.6.0"

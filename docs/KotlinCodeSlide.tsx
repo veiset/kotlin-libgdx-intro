@@ -1,5 +1,6 @@
-import { fadeTransition, SlideLayout } from 'spectacle';
 import React from 'react';
+import { fadeTransition, SlideLayout, CodePane, Heading } from 'spectacle';
+import styled from '@emotion/styled';
 
 type KotlinCodeSlideProps = {
     title: string;
@@ -7,13 +8,12 @@ type KotlinCodeSlideProps = {
 };
 
 export const KotlinCodeSlide = ({ title, code }: KotlinCodeSlideProps) => (
-    <SlideLayout.Code
-        language="kotlin"
-        title={title}
-        transition={fadeTransition}
-    >
-        {code}
-    </SlideLayout.Code>
+    <SlideLayout.Full transition={fadeTransition}>
+        <Heading fontWeight="300" fontSize="100px">
+            {title}
+        </Heading>
+        <CodePane language="kotlin">{code}</CodePane>
+    </SlideLayout.Full>
 );
 
 type KotlinCodeSlideTwoColumnsProps = {
@@ -27,16 +27,33 @@ export const KotlinCodeSlideTwoColumns = ({
     codeLeft,
     codeRight,
 }: KotlinCodeSlideTwoColumnsProps) => (
-    <SlideLayout.MultiCodeLayout
-        title={title}
-        transition={fadeTransition}
-        numColumns={2}
-        codeBlocks={[
-            { code: codeLeft, language: 'kotlin' },
-            {
-                code: codeRight,
-                language: 'kotlin',
-            },
-        ]}
-    />
+    <MultiColumnnCodeSlide transition={fadeTransition}>
+        <Heading fontWeight="300" fontSize="100px">
+            {title}
+        </Heading>
+        <CodeContainer>
+            <CodePane language="kotlin">{codeLeft}</CodePane>
+            <CodePane language="kotlin">{codeRight}</CodePane>
+        </CodeContainer>
+    </MultiColumnnCodeSlide>
 );
+
+const MultiColumnnCodeSlide = styled(SlideLayout.Full)`
+    width: 100%;
+    > div {
+        width: 100%;
+    }
+`;
+
+const CodeContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-y: scroll;
+    align-self: center;
+    width: 90%;
+
+    div {
+        width: 48%;
+    }
+`;
