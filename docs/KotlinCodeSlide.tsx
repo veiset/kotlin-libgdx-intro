@@ -41,7 +41,7 @@ export const KotlinCodeSlideTwoColumns = ({
 const MultiColumnnCodeSlide = styled(SlideLayout.Full)`
     width: 100%;
     > div {
-        width: 100%;
+        width: 90%;
     }
 `;
 
