@@ -6,6 +6,7 @@ import {
     Image,
     fadeTransition,
     Heading,
+    Box,
 } from 'spectacle';
 import vegardPNG from './bilder/vegard.png';
 import erikaPNG from './bilder/erika.png';
@@ -16,6 +17,7 @@ import joakimPNG from './bilder/joakim.png';
 import kenanPNG from './bilder/kenan.png';
 import ingridPNG from './bilder/ingrid.png';
 import tormartinPNG from './bilder/tormartin.png';
+import steffenPNG from './bilder/steffen.png';
 import styled from '@emotion/styled';
 
 type OmPersonProps = {
@@ -50,9 +52,9 @@ const OmPerson = ({ navn, bildeUrl, erfaring }: OmPersonProps) => (
     </PersonWrapper>
 );
 
-export const PresentereOss = () => (
+export const Hjelpere = () => (
     <SlideLayout.Full transition={fadeTransition}>
-        <Heading>Hvem er vi?</Heading>
+        <Heading>Hjelpere</Heading>
         <MainWrapper>
             <OmPerson
                 navn="Erika Åsberg"
@@ -92,6 +94,26 @@ export const PresentereOss = () => (
                 erfaring="2 måneder"
             />
         </MainWrapper>
+    </SlideLayout.Full>
+);
+
+export const PresentereOss = () => (
+    <SlideLayout.Full transition={fadeTransition}>
+        <Heading mb="50px">Kursholdere</Heading>
+        <Box mt="60px">
+            <MainWrapper>
+                <OmPerson
+                    navn="Vegard Veiset"
+                    bildeUrl={vegardPNG}
+                    erfaring="9 år"
+                />
+                <OmPerson
+                    navn="Steffen Hageland"
+                    bildeUrl={steffenPNG}
+                    erfaring="8 år"
+                />
+            </MainWrapper>
+        </Box>
     </SlideLayout.Full>
 );
 
