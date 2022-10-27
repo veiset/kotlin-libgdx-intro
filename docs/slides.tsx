@@ -18,6 +18,7 @@ import immutability from './slides/code-examples/kotlin05-immutability.kts?raw';
 import baseJavaExample from './slides/code-examples/java-base-example.java?raw';
 import baseKotlinExample from './slides/code-examples/kotlin-base-example.kts?raw';
 import mainLoop from './slides/code-examples/simple-module.kts?raw';
+import {Hjelpere} from "./slides/Hjelpere";
 
 const theme = {
     fonts: {
@@ -35,6 +36,7 @@ export const Presentation = () => (
     <Deck theme={theme}>
         <TitleSplash />
         <PresentereOss />
+        <Hjelpere />
         <SpilletViSkalLage />
         <Demo />
         <HvaErKotlin />
