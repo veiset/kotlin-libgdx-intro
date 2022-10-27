@@ -54,7 +54,7 @@ const OmPerson = ({ navn, bildeUrl, erfaring }: OmPersonProps) => (
 
 export const Hjelpere = () => (
     <SlideLayout.Full transition={fadeTransition}>
-        <Heading>Hjelpere</Heading>
+        <Heading>Hvem er vi?</Heading>
         <MainWrapper>
             <OmPerson
                 navn="Erika Åsberg"
