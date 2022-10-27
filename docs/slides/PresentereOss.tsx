@@ -147,7 +147,6 @@ const MainWrapper = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 95vw;
 `;
 
 const PersonWrapper = styled.div`
