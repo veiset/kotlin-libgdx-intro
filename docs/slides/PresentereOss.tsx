@@ -77,7 +77,7 @@ export const PresentereOss = () => (
             />
             <OmPerson navn="Kenan Mahic" bildeUrl={kenanPNG} erfaring="2 år" />
             <OmPerson
-                navn="Ingrid Bolden"
+                navn="Ingrid Volden"
                 bildeUrl={ingridPNG}
                 erfaring="2 år"
             />
