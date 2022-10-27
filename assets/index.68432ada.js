@@ -428,7 +428,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 95vw;
 `,zne=xa.div`
     width: 19%;
     margin-top: 10px;
