@@ -1,3 +1,24 @@
+# Introduksjon til Kotlin (WIP)
+
+
+Note: Sjekk https://github.com/bekk/kotlin-workshop/tree/master/src/main/kotlin for insp for oppgaver
+
+Tema, f.eks:
+
+Hva er data classes?
+
+Immutable vs mutable
+
+Filter/Map/Reduce?
+
+Extention Functions
+
+functions vs expression functions (`fun a() { return "hei" }`  vs `fun a() = "hei"`)
+
+Oppgave-sett under f.eks: src/main/kotlin/no.bekk.kotlin.intro/
+
+
+
 # Lage ditt første spill med LibGDX og kotlin
 
 Vi vil starte med å lage et lite spill hvor du skal styre en firkant på skjermen som skal
