@@ -1,27 +1,39 @@
-# Introduksjon til Kotlin (WIP)
+# Introduksjon til Kotlin
 
+Først og fremst, velkommen til Bootcamp og velkommen til Bekk! 🥳
 
-Note: Sjekk https://github.com/bekk/kotlin-workshop/tree/master/src/main/kotlin for insp for oppgaver
+Denne workshopen er delt inn i to deler: den første delen gir deg en generell introduksjon til noen viktige konsepter i Kotlin, før vi skal lage et spill i del to! Dersom du har vært borti Kotlin før, må du gjerne hoppe over del en. 
 
-Tema, f.eks:
+Og ikke glem, bruk coachene og kollegaene dine aktivt! Vi er her for å hjelpe 🚀
 
-Hva er data classes?
+## Hva er data classes?
+- To setninger om dataclasses, kodeeksempel og henvisning til oppgave
 
-Immutable vs mutable
+```
+data class Bekker(
+    val name: String,
+    )
+```
 
-Filter/Map/Reduce?
+## Immutable vs mutable
+- To setninger om immutable vs mutable, kodeeksempel og henvisning til oppgave
 
-Extention Functions
+## Filter/Map/Reduce?
+- To setninger om bruken av disse, kodeeksempel og henvisning til oppgave
 
-functions vs expression functions (`fun a() { return "hei" }`  vs `fun a() = "hei"`)
+## Extention Functions
+- To setninger om extension function, kodeeksempel og henvisning til oppgave
+
+## Functions vs expression functions (`fun a() { return "hei" }`  vs `fun a() = "hei"`)
+- To setninger, kodeeksempler og henvisning til oppgave
 
 Oppgave-sett under f.eks: src/main/kotlin/no.bekk.kotlin.intro/
+Note: Sjekk https://github.com/bekk/kotlin-workshop/tree/master/src/main/kotlin for insp for oppgaver
 
 
+# Lage ditt første spill med LibGDX og Kotlin
 
-# Lage ditt første spill med LibGDX og kotlin
-
-Vi vil starte med å lage et lite spill hvor du skal styre en firkant på skjermen som skal
+Nå skal vi lage et spill! Du skal styre en firkant på skjermen. Firkanten skal
 unngå andre firkanter som faller ned fra toppen av skjermen. Målet med oppgaven er å gjøre
 deg litt kjent med et par viktige konsepter som du kan ta med deg inn i de litt mer kreative
 oppgavene.
@@ -29,8 +41,7 @@ oppgavene.
 ![Animasjon av spillet](docs/slides/bilder/game-animation.gif)
 
 Skjelettet av koden er allerede skrevet - og består i hovedsak av tomme metoder som
-det er opp til deg å implementere i denne delen av workshopen. Vi tar det stegvis, og når
-alle metodene er implementert ender man opp med et ferdig spill.
+det er opp til deg å implementere. Vi tar det stegvis, og når alle metodene er implementert ender du opp med et ferdig spill.
 
 Koden vi skal jobbe finner du i filen [Main.kt](src/main/kotlin/org/veiset/libgdx/Main.kt).
 
@@ -114,7 +125,8 @@ Legg gjerne til litt ekstra features som du tenker kan være kult.
  * Vise hvor lenge man overlevde på en "score screen" når man taper?
  * Øke vanskelighetsgraden over tid (øke tempoet på brikkene som faller, spawne flere)
  * Blokker av ulike størrelser og med ulik fart?
- * Bytte ut firkantene med bilder?
+ * Lag din egen figur!
+ * Bytte ut firkantene med bilder
  * Se gjerne på ting i `examples`-mappen for inspirasjon til flere ting å leke seg med
 
 Legg gjerne på kule ting du kommer på, eller gå videre til neste oppgave som er litt åpen.
