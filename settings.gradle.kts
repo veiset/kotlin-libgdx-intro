@@ -1,2 +1,1 @@
-rootProject.name = "kotlin-libgdx-intro"
-
+rootProject.name = "kotlin-ws-bc"

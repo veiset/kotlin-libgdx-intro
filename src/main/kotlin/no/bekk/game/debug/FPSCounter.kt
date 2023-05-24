@@ -1,10 +1,10 @@
-package org.veiset.libgdx.debug
+package no.bekk.game.debug
 
 import ktx.graphics.use
-import org.veiset.libgdx.EngineConfig
-import org.veiset.libgdx.globals
-import org.veiset.libgdx.utils.fontWithSize
-import org.veiset.libgdx.utils.round
+import no.bekk.game.EngineConfig
+import no.bekk.game.globals
+import no.bekk.game.utils.fontWithSize
+import no.bekk.game.utils.round
 
 class FPSCounter {
     private val font = fontWithSize(14)

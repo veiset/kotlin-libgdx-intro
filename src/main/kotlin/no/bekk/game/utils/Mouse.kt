@@ -1,9 +1,9 @@
-package org.veiset.libgdx.utils
+package no.bekk.game.utils
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.math.Vector2
-import org.veiset.libgdx.EngineConfig
-import org.veiset.libgdx.globals
+import no.bekk.game.EngineConfig
+import no.bekk.game.globals
 
 /**
  * Scales a click based on the window size.

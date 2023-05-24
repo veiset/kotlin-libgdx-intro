@@ -1,17 +1,17 @@
-package org.veiset.libgdx.examples
+package no.bekk.game.examples
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.graphics.rect
 import ktx.graphics.use
-import org.veiset.libgdx.AppModule
-import org.veiset.libgdx.AppRunner
-import org.veiset.libgdx.config
-import org.veiset.libgdx.globals
-import org.veiset.libgdx.utils.TxSize
-import org.veiset.libgdx.utils.getGraphic
-import org.veiset.libgdx.utils.x
+import no.bekk.game.AppModule
+import no.bekk.game.AppRunner
+import no.bekk.game.config
+import no.bekk.game.globals
+import no.bekk.game.utils.TxSize
+import no.bekk.game.utils.getGraphic
+import no.bekk.game.utils.x
 import kotlin.math.cos
 import kotlin.math.sin
 

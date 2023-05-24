@@ -1,8 +1,8 @@
-package org.veiset.libgdx.utils.math
+package no.bekk.game.utils.math
 
 import com.badlogic.gdx.math.Vector2
-import org.veiset.libgdx.utils.component1
-import org.veiset.libgdx.utils.component2
+import no.bekk.game.utils.component1
+import no.bekk.game.utils.component2
 import kotlin.math.max
 import kotlin.math.min
 

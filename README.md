@@ -6,26 +6,99 @@ Denne workshopen er delt inn i to deler: den første delen gir deg en generell i
 
 Og ikke glem, bruk coachene og kollegaene dine aktivt! Vi er her for å hjelpe 🚀
 
-## Hva er data classes?
-- To setninger om dataclasses, kodeeksempel og henvisning til oppgave
+## Data classes
 
+En data class .....
 ```
 data class Bekker(
     val name: String,
     )
 ```
+Oppgave: 
+Åpne filen i introduction som heter "DataClass". Lag en data class som heter Konsulent, med navn, avdeling, og faggruppe. 
 
-## Immutable vs mutable
-- To setninger om immutable vs mutable, kodeeksempel og henvisning til oppgave
+Løsning: 
+```
+data class Konsulent(
+    val name: String,
+    )
+```
 
-## Filter/Map/Reduce?
-- To setninger om bruken av disse, kodeeksempel og henvisning til oppgave
+// BekkKonsulent vs konsulent
+// Mål er at de skal kunne kjøre main, og opprette en konsulent
+// Program som varierende grad funker når du bare har en class, og sleng på data og sjekk hva du får på autocomplete
+
+## Immutable vs Mutable
+
+```
+```
+
+Oppgave:
+
+// var vs val
+// Opprette en mutable list og en immmutable list, som de oppretter i main og forklarer hvordan det funker
+
+// En liste over konsulenter
+// Eller liste over faggrupper
+Løsning:
+```
+```
+
+## Functions
+
+// Snakk litt om funksjoner og default arguments,
+
+Oppgave:
+// Legg til en funksjon på konsulent-klassen som printer "Hallo, name" + valgfri suffix. 
+
+Løsning:
+```
+```
+
+## Lambda og bruken av it
+
+Oppgave:
+// Bruk .let til å gjøre ett eller annet
+
+Løsning:
+```
+```
+
+
+## Higher Order Functions
+- To setninger om bruken av disse
+
+Map, filter og forEach
+
+```
+```
+
+Oppgave:
+
+// Ha en mappe med coacher
+// Map over listen med coacher og lag en liste med BekkKonsulenter
+// Filtrer ut de som har A i navnet sitt
+
+Løsning:
+```
+```
+
 
 ## Extention Functions
 - To setninger om extension function, kodeeksempel og henvisning til oppgave
 
-## Functions vs expression functions (`fun a() { return "hei" }`  vs `fun a() = "hei"`)
-- To setninger, kodeeksempler og henvisning til oppgave
+
+Oppgave:
+
+// Skriv om denne funksjonen til å være en extension-function istedet
+
+Løsning:
+```
+```
+
+## Mangler vi ett punkt til?
+
+
 
 Oppgave-sett under f.eks: src/main/kotlin/no.bekk.kotlin.intro/
 Note: Sjekk https://github.com/bekk/kotlin-workshop/tree/master/src/main/kotlin for insp for oppgaver
@@ -47,7 +120,7 @@ Koden vi skal jobbe finner du i filen [Main.kt](src/main/kotlin/org/veiset/libgd
 
 ## 1. Tegne en figur (spilleren) på skjermen.
 
-Det første vi skal gjøre er å tegne noe på skjermen, og vi starter med selve spilleren
+Det første vi skal gjøre er å tegne noe på skjermen, og vi starter med selve spilleren.
 Start med å implementere metoden `drawPlayer` slik at den tegner spillere som en firkant
 på skjermen. Du kan fritt velge farge du ønsker å bruke.
 

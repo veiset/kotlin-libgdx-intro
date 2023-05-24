@@ -1,4 +1,4 @@
-package org.veiset.libgdx.utils.math
+package no.bekk.game.utils.math
 
 import kotlin.math.floor
 import kotlin.math.sqrt

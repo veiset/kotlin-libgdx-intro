@@ -1,4 +1,4 @@
-package org.veiset.libgdx
+package no.bekk.game
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration
 

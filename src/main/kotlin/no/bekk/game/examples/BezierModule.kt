@@ -1,16 +1,16 @@
-package org.veiset.libgdx.examples
+package no.bekk.game.examples
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.graphics.circle
 import ktx.graphics.use
-import org.veiset.libgdx.AppModule
-import org.veiset.libgdx.AppRunner
-import org.veiset.libgdx.config
-import org.veiset.libgdx.globals
-import org.veiset.libgdx.utils.math.Bezier
-import org.veiset.libgdx.utils.x
+import no.bekk.game.AppModule
+import no.bekk.game.AppRunner
+import no.bekk.game.config
+import no.bekk.game.globals
+import no.bekk.game.utils.math.Bezier
+import no.bekk.game.utils.x
 
 fun main() {
     LwjglApplication(AppRunner { BezierModule() }, config)
