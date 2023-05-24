@@ -74,7 +74,6 @@ Map, filter og forEach
 ```
 
 Oppgave:
-
 // Ha en mappe med coacher
 // Map over listen med coacher og lag en liste med BekkKonsulenter
 // Filtrer ut de som har A i navnet sitt
@@ -84,21 +83,21 @@ Løsning:
 ```
 
 
-## Extention Functions
-- To setninger om extension function, kodeeksempel og henvisning til oppgave
+## Extension Functions
+To setninger om extension function, kodeeksempel og henvisning til oppgave
 
 
 Oppgave:
+Skriv om denne funksjonen til å være en extension-function istedet
 
-// Skriv om denne funksjonen til å være en extension-function istedet
+<details><summary> 🤠 Løsningsforslag</summary>
 
-Løsning:
 ```
 ```
+Kommentar til løsning?
 
-## Mangler vi ett punkt til?
-
-
+</details>
+    
 
 Oppgave-sett under f.eks: src/main/kotlin/no.bekk.kotlin.intro/
 Note: Sjekk https://github.com/bekk/kotlin-workshop/tree/master/src/main/kotlin for insp for oppgaver
