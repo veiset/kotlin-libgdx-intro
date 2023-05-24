@@ -1,14 +1,14 @@
-package org.veiset.libgdx.debug
+package no.bekk.game.debug
 
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.graphics.use
-import org.veiset.libgdx.globals
-import org.veiset.libgdx.utils.component1
-import org.veiset.libgdx.utils.component2
-import org.veiset.libgdx.utils.fontWithSize
-import org.veiset.libgdx.utils.round
-import org.veiset.libgdx.utils.scaledPointer
+import no.bekk.game.globals
+import no.bekk.game.utils.component1
+import no.bekk.game.utils.component2
+import no.bekk.game.utils.fontWithSize
+import no.bekk.game.utils.round
+import no.bekk.game.utils.scaledPointer
 
 
 class VisualMouse {

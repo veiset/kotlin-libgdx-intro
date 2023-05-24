@@ -1,11 +1,11 @@
-package org.veiset.libgdx.examples
+package no.bekk.game.examples
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
-import org.veiset.libgdx.AppModule
-import org.veiset.libgdx.AppRunner
-import org.veiset.libgdx.config
+import no.bekk.game.AppModule
+import no.bekk.game.AppRunner
+import no.bekk.game.config
 
 fun main() {
     LwjglApplication(AppRunner { SceneManagerModule() }, config)

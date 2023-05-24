@@ -1,5 +1,7 @@
-package org.veiset.libgdx
+package no.bekk.game.solution
 
+import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.Input
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
@@ -7,29 +9,29 @@ import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.utils.TimeUtils
 import ktx.graphics.rect
 import ktx.graphics.use
-import org.veiset.libgdx.utils.Rectangle
-import org.veiset.libgdx.utils.x
+import no.bekk.game.AppModule
+import no.bekk.game.AppRunner
+import no.bekk.game.EngineConfig
+import no.bekk.game.config
+import no.bekk.game.globals
+import org.veiset.libgdx.*
+import no.bekk.game.utils.Rectangle
+import no.bekk.game.utils.x
 
 fun main() {
-    LwjglApplication(AppRunner { DodgeFallingSqueres() }, config)
+    LwjglApplication(AppRunner { DodgeFallingSqueresSolution() }, config)
 }
 
-class DodgeFallingSqueres: AppModule {
+class DodgeFallingSqueresSolution: AppModule {
     private val shapeRenderer = globals.shapeRenderer
     private var lastBlockSpawnTime = TimeUtils.millis()
+    private var movementSpeed = 500f
+    private var blocksFallSpeed = 250f
     private var player = Rectangle(
-        position = Vector2(EngineConfig.width / 2f, 200f),
-        size = Vector2(20f, 20f)
+        position = EngineConfig.width / 2 x 200,
+        size = 20 x 20
     )
     private var blocksToDodge: List<Rectangle> = emptyList()
-
-    /**
-     * This function should draw the player in the current position on the screen.
-     * Use the utility method `drawRectangle` to draw on the screen.
-     */
-    private fun drawPlayer() {
-
-    }
 
     /**
      * In this method we will implement player movement.
@@ -40,7 +42,24 @@ class DodgeFallingSqueres: AppModule {
      * not dependant of the update-rate.
      */
     private fun handlePlayerMovement(delta: Float) {
+        if (Gdx.input.isKeyPressed(Input.Keys.D) || Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+            player.position.x += delta * movementSpeed
+        }
+        if (Gdx.input.isKeyPressed(Input.Keys.A) || Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+            player.position.x -= delta * movementSpeed
+        }
+        if (Gdx.input.isKeyPressed(Input.Keys.W) || Gdx.input.isKeyPressed(Input.Keys.UP)) {
+            player.position.y += delta * movementSpeed
+        }
+        if (Gdx.input.isKeyPressed(Input.Keys.S) || Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            player.position.y -= delta * movementSpeed
+        }
 
+        if (player.position.x < 0) { player.position.x = 0f }
+        if (player.position.x > EngineConfig.width) { player.position.x = EngineConfig.width.toFloat() }
+
+        if (player.position.y < 0) { player.position.y = 0f }
+        if (player.position.y > EngineConfig.height) { player.position.y = EngineConfig.height.toFloat() }
     }
 
     /**
@@ -51,27 +70,24 @@ class DodgeFallingSqueres: AppModule {
      * @return true if the game should spawn new blocks, false if not
      */
     private fun shouldSpawnNewBlocks(timeSinceLastBlock: Long): Boolean {
-        return false
+        return timeSinceLastBlock > 100
     }
 
     /**
      * Here we will implement logic for spawning new blocks that the player
      * has to dodge. The blocks should start at top of the screen at a random
-     * X-coordinate. The blocks should be added to the list `blocksToDodge`.
-     *
-     * Keep in mind that most things (like lists) are immutable in Kotlin. So we
-     * can't actually add anything to the list. Instead we want to make a new list.
+     * X-coordinate. The the blocks should be added to the list `blocksToDodge`.
      */
-    private fun spawnNewBlock() {
-
-    }
-
-    /**
-     * This function should draw all the blocks the player has to dodge on the screen.
-     * Use the utility method `drawRectangle` to draw on the screen.
-     */
-    private fun drawAllBlocksToDodge() {
-
+    private fun spawnNewBlocks() {
+        val position = Vector2(
+            (Math.random() * EngineConfig.width).toFloat(),
+            EngineConfig.height + 20f
+        )
+        val block = Rectangle(
+            position = position,
+            size = 20 x 20
+        )
+        blocksToDodge = blocksToDodge + listOf(block)
     }
 
     /**
@@ -81,18 +97,8 @@ class DodgeFallingSqueres: AppModule {
      * not dependant of the update-rate.
      */
     private fun handleMoveBlocks(delta: Float) {
-
-    }
-
-    /**
-     * Checks if the player is colliding with any of the blocks in the `blocksToDodge`-list.
-     * `Rectangle` has a utility method `isCollidingWith` that checks if 2 Rectangles are
-     * overlapping.
-     *
-     * @return true if the player is colliding with any blocks, false if not.
-     */
-    private fun playerIsColliding(): Boolean {
-        return false
+        blocksToDodge = blocksToDodge
+            .map { it.move(0f x -blocksFallSpeed * delta) }
     }
 
     /**
@@ -100,7 +106,28 @@ class DodgeFallingSqueres: AppModule {
      * and fall downwards we can remove any blocks that are below the screen.
      */
     private fun removeBlocksOutOfBounds() {
+        blocksToDodge = blocksToDodge
+            .filter { it.position.y > 0 }
+    }
 
+    private fun playerIsColliding(): Boolean {
+        return blocksToDodge.any { it.isCollidingWith(player) }
+    }
+
+    /**
+     * This function should draw the player in the current position on the screen.
+     * Use the utility method `drawRectangle` to draw on the screen.
+     */
+    private fun drawPlayer() {
+        drawRectangle(player, Color.RED)
+    }
+
+    /**
+     * This function should draw all the blocks the player has to dodge on the screen.
+     * Use the utility method `drawRectangle` to draw on the screen.
+     */
+    private fun drawAllBlocksToDodge() {
+        blocksToDodge.forEach { drawRectangle(it, Color.GRAY) }
     }
 
     /**
@@ -110,8 +137,8 @@ class DodgeFallingSqueres: AppModule {
      */
     private fun onGameLost() {
         player = Rectangle(
-            position = Vector2(EngineConfig.width / 2f, 200f),
-            size = Vector2(20f, 20f)
+            position = EngineConfig.width / 2 x 200,
+            size = 20 x 20
         )
         blocksToDodge = emptyList()
     }
@@ -127,7 +154,7 @@ class DodgeFallingSqueres: AppModule {
         handlePlayerMovement(delta)
         if (shouldSpawnNewBlocks(TimeUtils.timeSinceMillis(lastBlockSpawnTime))) {
             lastBlockSpawnTime = TimeUtils.millis()
-            spawnNewBlock()
+            spawnNewBlocks()
         }
 
         handleMoveBlocks(delta)
@@ -143,12 +170,6 @@ class DodgeFallingSqueres: AppModule {
         drawAllBlocksToDodge()
     }
 
-    /**
-     * Draws a filled rectangle on the screen.
-     *
-     * @param rectangle The rectangle to draw
-     * @param color The color of the rectangle
-     */
     private fun drawRectangle(rectangle: Rectangle, color: Color) {
         shapeRenderer.use(ShapeRenderer.ShapeType.Filled) {
             it.color = color

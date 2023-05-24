@@ -1,4 +1,4 @@
-package org.veiset.libgdx
+package no.bekk.game
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
@@ -8,8 +8,8 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.utils.viewport.FitViewport
 import ktx.app.KtxApplicationAdapter
 import ktx.app.clearScreen
-import org.veiset.libgdx.debug.FPSCounter
-import org.veiset.libgdx.debug.VisualMouse
+import no.bekk.game.debug.FPSCounter
+import no.bekk.game.debug.VisualMouse
 import kotlin.system.measureNanoTime
 
 interface AppModule {

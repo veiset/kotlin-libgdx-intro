@@ -1,15 +1,15 @@
-package org.veiset.libgdx.examples
+package no.bekk.game.examples
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.graphics.Color
 import ktx.graphics.use
-import org.veiset.libgdx.AppModule
-import org.veiset.libgdx.AppRunner
-import org.veiset.libgdx.config
-import org.veiset.libgdx.globals
-import org.veiset.libgdx.utils.fontWithSize
+import no.bekk.game.AppModule
+import no.bekk.game.AppRunner
+import no.bekk.game.config
+import no.bekk.game.globals
+import no.bekk.game.utils.fontWithSize
 
 fun main() {
     LwjglApplication(AppRunner { InputAndTextModule() }, config)

@@ -1,4 +1,4 @@
-package org.veiset.libgdx.utils
+package no.bekk.game.utils
 
 import kotlin.math.pow
 import kotlin.math.roundToInt
