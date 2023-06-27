@@ -9,25 +9,20 @@ import {
     Box,
 } from 'spectacle';
 import vegardPNG from './bilder/vegard.png';
-import erikaPNG from './bilder/erika.png';
-import sigurdPNG from './bilder/sigurd.png';
-import augustPNG from './bilder/august.png';
-import frikkPNG from './bilder/frikk.png';
-import joakimPNG from './bilder/joakim.png';
-import kenanPNG from './bilder/kenan.png';
-import ingridPNG from './bilder/ingrid.png';
-import tormartinPNG from './bilder/tormartin.png';
 import steffenPNG from './bilder/steffen.png';
+import stianPNG from './bilder/stian.png';
+import alexanderPNG from './bilder/alexander.png';
 import styled from '@emotion/styled';
 
 type OmPersonProps = {
     navn: string;
     erfaring: string;
     bildeUrl: string;
+    attending?: boolean
 };
 
-const OmPerson = ({ navn, bildeUrl, erfaring }: OmPersonProps) => (
-    <PersonWrapper>
+const OmPerson = ({ navn, bildeUrl, erfaring, attending = true }: OmPersonProps) => (
+    <PersonWrapper opacity={attending ? 1 : 0.3}>
         <FlexBox flexDirection="column" justifyContent="center">
             <RoundedProfileImage bildeUrl={bildeUrl} />
             <Text
@@ -52,65 +47,31 @@ const OmPerson = ({ navn, bildeUrl, erfaring }: OmPersonProps) => (
     </PersonWrapper>
 );
 
-export const Hjelpere = () => (
-    <SlideLayout.Full transition={fadeTransition}>
-        <Heading>Hvem er vi?</Heading>
-        <MainWrapper>
-            <OmPerson
-                navn="Erika Åsberg"
-                bildeUrl={erikaPNG}
-                erfaring="2 måneder"
-            />
-            <OmPerson
-                navn="Sigurd Hynne"
-                bildeUrl={sigurdPNG}
-                erfaring="2 måneder"
-            />
-            <OmPerson navn="August Dahl" bildeUrl={augustPNG} erfaring="1 år" />
-            <OmPerson
-                navn="Frikk Andersen"
-                bildeUrl={frikkPNG}
-                erfaring="1 år"
-            />
-            <OmPerson
-                navn="Joakim Sjøhaug"
-                bildeUrl={joakimPNG}
-                erfaring="1 år"
-            />
-            <OmPerson navn="Kenan Mahic" bildeUrl={kenanPNG} erfaring="2 år" />
-            <OmPerson
-                navn="Ingrid Volden"
-                bildeUrl={ingridPNG}
-                erfaring="2 år"
-            />
-            <OmPerson
-                navn="Vegard Veiset"
-                bildeUrl={vegardPNG}
-                erfaring="9 år"
-            />
-            <OmPerson
-                navn="Tor Martin Wang"
-                bildeUrl={tormartinPNG}
-                erfaring="2 måneder"
-            />
-        </MainWrapper>
-    </SlideLayout.Full>
-);
-
 export const PresentereOss = () => (
     <SlideLayout.Full transition={fadeTransition}>
         <Heading mb="50px">Kursholdere</Heading>
         <Box mt="60px">
             <MainWrapper>
                 <OmPerson
-                    navn="Vegard Veiset"
-                    bildeUrl={vegardPNG}
+                    navn="Steffen Hageland"
+                    bildeUrl={steffenPNG}
                     erfaring="9 år"
                 />
                 <OmPerson
-                    navn="Steffen Hageland"
-                    bildeUrl={steffenPNG}
-                    erfaring="8 år"
+                    navn="Alexander Svendsen"
+                    bildeUrl={alexanderPNG}
+                    erfaring="9 år"
+                />
+                <OmPerson
+                    navn="Stian Stensli"
+                    bildeUrl={stianPNG}
+                    erfaring="3 år"
+                />
+                <OmPerson
+                    navn="Vegard Veiset"
+                    bildeUrl={vegardPNG}
+                    erfaring="10 år"
+                    attending={false}
                 />
             </MainWrapper>
         </Box>
@@ -149,8 +110,12 @@ const MainWrapper = styled.div`
     width: 100%;
 `;
 
-const PersonWrapper = styled.div`
+type PersonWrapperProps = {
+    opacity: number
+}
+const PersonWrapper = styled.div(({ opacity }: PersonWrapperProps) => `
+    opacity: ${opacity};
     width: 19%;
     margin-top: 10px;
     margin-bottom: 30px;
-`;
+`);
