@@ -14,7 +14,6 @@ import no.bekk.game.AppRunner
 import no.bekk.game.EngineConfig
 import no.bekk.game.config
 import no.bekk.game.globals
-import org.veiset.libgdx.*
 import no.bekk.game.utils.Rectangle
 import no.bekk.game.utils.x
 
