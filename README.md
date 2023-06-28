@@ -101,24 +101,89 @@ coacher2023.sumOf { it.yearsInBekk }
 </details>
 
 ## Extension Functions
-To setninger om extension function, kodeeksempel og henvisning til oppgave
+Noen ganger har vi behov for spesialtilpasset funksjonalitet på en klasse som vi ikke har tilgang til å endre, for eksempel de innebygde klassene Int eller String.
+Da kan du skrive en spesiell type funksjon som heter extension functions.
 
-
-Oppgave:
-Skriv om denne funksjonen til å være en extension-function istedet
-
-<details><summary> 🤠 Løsningsforslag</summary>
-
+Funksjonen kan skrives på følgende måte:
+``` 
+fun <Klasse>.<funksjonsnavn>(<argumenter>): <return type> {
+    // gjør noe
+}
 ```
-```
-Kommentar til løsning?
 
+For å refere til instansen av klassen bruker vi `this`.
+
+```kotlin
+fun double(x: Int) {
+    return x * 2
+}
+// æsj, kjedelig
+val four = double(2)
+
+fun Int.triple() {
+    return this * 3
+} 
+// wow, kult 🤩
+val six = 2.triple()
+```
+
+Extension functions kan også gjøre det mer leselig ved at man kan "chaine" funksjonskall. 
+
+```kotlin
+val unreadableMess = square(triple(increase(double(2))))
+
+val ahhMuchBetter = 2
+    .double()
+    .increase()
+    .triple()
+    .square()
+```
+
+Dette kan bli spesielt nyttig når man håndterer null-verdier. 
+
+```kotlin
+// 🤮
+val konsulentMaybe: Konsulent? = getKonsulent()
+val konsulentInfo = if (konsulentMaybe) getInfo(konsulentMaybe) else null
+
+// 😍
+val konsulentInfo = getKonsulent()?.getInfo()
+```
+
+Oppgavene ligger i fila [ExtensionFunctions.kt](src/main/kotlin/no/bekk/introduction/ExtensionFunctions.kt)
+
+<details>
+<summary> 🤠 Løsningsforslag</summary>
+
+```kotlin
+// Oppgave 1
+fun BootcampCoach.getInfo(): String {
+    return "${this.name} er i avdeling ${this.avdeling} og har jobbet ${this.yearsInBekk} år i Bekk"
+}
+
+// Oppgave 2
+fun BootcampCoach.hasWorkedLongerThan(otherCoach: BootcampCoach): Boolean {
+    return this.yearsInBekk > otherCoach.yearsInBekk
+}
+
+// Oppgave 3
+fun BootcampCoach.addYears(years: Int): BootcampCoach {
+    return BootcampCoach(this.name, this.avdeling, this.yearsInBekk + years)
+}
+
+fun BootcampCoach.withAvdeling(avdeling: Avdeling): BootcampCoach {
+    return BootcampCoach(this.name, avdeling, this.yearsInBekk)
+}
+// i main:
+print(ingrid
+    .addYears(1)
+    .withAvdeling(Avdeling.BMC)
+    .getInfo()
+)
+```
+
+Du kan lese mer om extension functions i [den offisielle Kotlin-dokumentasjonen](https://kotlinlang.org/docs/extensions.html).
 </details>
-    
-
-Oppgave-sett under f.eks: src/main/kotlin/no.bekk.kotlin.intro/
-Note: Sjekk https://github.com/bekk/kotlin-workshop/tree/master/src/main/kotlin for insp for oppgaver
-
 
 # Lage ditt første spill med LibGDX og Kotlin
 
