@@ -1,8 +1,21 @@
 package no.bekk.introduction
 
-class Konsulent(val name: String)
+data class BootcampCoach(
+    val name: String,
+    val avdeling: Avdeling,
+    val yearsInBekk: Int,
+)
+enum class Avdeling {
+    TEKNOLOGI, DESIGN, BMC
+}
 
-// Klasse konsulent
+val ingrid = BootcampCoach(
+    "Ingrid",
+    Avdeling.TEKNOLOGI,
+    3,
+)
+
+val coacher2023 = listOf<BootcampCoach>(ingrid)
 
 fun main() {
     // Print konsulent
