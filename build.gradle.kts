@@ -1,6 +1,5 @@
 plugins {
     kotlin("jvm") version "1.7.10"
-    application
 }
 
 group = "org.veiset.libgdx"
@@ -23,8 +22,4 @@ dependencies {
     implementation("io.github.libktx:ktx-app:$ktxVersion")
     implementation("io.github.libktx:ktx-graphics:$ktxVersion")
     implementation("io.github.libktx:ktx-box2d:$ktxVersion")
-}
-
-application {
-    applicationDefaultJvmArgs = listOf("-XstartOnFirstThread")
 }
