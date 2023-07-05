@@ -42,7 +42,7 @@ kan man se om man holder nede `PIL OPP` med `Gdx.input.isKeyPressed(Input.Keys.U
 
 Når man har fått spilleren til å bevege seg rundt på skjermen kan man legge til at
 spilleren ikke skal få lov til å bevege seg utenfor skjermen. Bredde og høyde på skjermen
-han man hente fra `EngineConfig.height` og `EngineConfig.width`.
+han man hente fra `EngineConfig.VIEWPORT_HEIGHT` og `EngineConfig.VIEWPORT_WIDTH`.
 
 Posisjonen til spilleren  er posisjonen til nedre venstre hjørne av rektangelet, og
 det kan være fint å ta høyde for størrelsen på rektangelet når man skal holde spilleren

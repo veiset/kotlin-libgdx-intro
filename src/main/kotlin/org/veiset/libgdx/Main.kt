@@ -17,7 +17,7 @@ class DodgeFallingSqueres: AppModule {
     private val shapeRenderer = globals.shapeRenderer
     private var lastBlockSpawnTime = TimeUtils.millis()
     private var player = Rectangle(
-        position = Vector2(EngineConfig.width / 2f, 200f),
+        position = Vector2(EngineConfig.VIEWPORT_WIDTH / 2f, 200f),
         size = Vector2(20f, 20f)
     )
     private var blocksToDodge: List<Rectangle> = emptyList()
@@ -109,7 +109,7 @@ class DodgeFallingSqueres: AppModule {
      */
     private fun onGameLost() {
         player = Rectangle(
-            position = Vector2(EngineConfig.width / 2f, 200f),
+            position = Vector2(EngineConfig.VIEWPORT_WIDTH / 2f, 200f),
             size = Vector2(20f, 20f)
         )
         blocksToDodge = emptyList()

@@ -23,7 +23,7 @@ class DodgeFallingSqueresSolution: AppModule {
     private var movementSpeed = 500f
     private var blocksFallSpeed = 250f
     private var player = Rectangle(
-        position = EngineConfig.width / 2 x 200,
+        position = EngineConfig.VIEWPORT_WIDTH / 2 x 200f,
         size = 20 x 20
     )
     private var blocksToDodge: List<Rectangle> = emptyList()
@@ -51,10 +51,10 @@ class DodgeFallingSqueresSolution: AppModule {
         }
 
         if (player.position.x < 0) { player.position.x = 0f }
-        if (player.position.x > EngineConfig.width) { player.position.x = EngineConfig.width.toFloat() }
+        if (player.position.x > EngineConfig.VIEWPORT_WIDTH) { player.position.x = EngineConfig.VIEWPORT_WIDTH.toFloat() }
 
         if (player.position.y < 0) { player.position.y = 0f }
-        if (player.position.y > EngineConfig.height) { player.position.y = EngineConfig.height.toFloat() }
+        if (player.position.y > EngineConfig.VIEWPORT_HEIGHT) { player.position.y = EngineConfig.VIEWPORT_HEIGHT.toFloat() }
     }
 
     /**
@@ -75,8 +75,8 @@ class DodgeFallingSqueresSolution: AppModule {
      */
     private fun spawnNewBlocks() {
         val position = Vector2(
-            (Math.random() * EngineConfig.width).toFloat(),
-            EngineConfig.height + 20f
+            (Math.random() * EngineConfig.VIEWPORT_WIDTH).toFloat(),
+            EngineConfig.VIEWPORT_HEIGHT + 20f
         )
         val block = Rectangle(
             position = position,
@@ -132,7 +132,7 @@ class DodgeFallingSqueresSolution: AppModule {
      */
     private fun onGameLost() {
         player = Rectangle(
-            position = EngineConfig.width / 2 x 200,
+            position = EngineConfig.VIEWPORT_WIDTH / 2 x 200f,
             size = 20 x 20
         )
         blocksToDodge = emptyList()

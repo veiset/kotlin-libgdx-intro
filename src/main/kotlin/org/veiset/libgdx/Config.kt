@@ -17,4 +17,5 @@ val config = Lwjgl3ApplicationConfiguration().apply {
     setWindowedMode(EngineConfig.width, EngineConfig.height)
     setForegroundFPS(60)
     useVsync(false)
+
 }
