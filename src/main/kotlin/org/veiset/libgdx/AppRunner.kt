@@ -2,6 +2,7 @@ package org.veiset.libgdx
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
@@ -14,6 +15,8 @@ import ktx.graphics.rect
 import ktx.graphics.use
 import org.veiset.libgdx.debug.FPSCounter
 import org.veiset.libgdx.debug.VisualMouse
+import org.veiset.libgdx.examples.BezierModule
+import org.veiset.libgdx.utils.StartOnFirstThreadHelper
 import kotlin.system.measureNanoTime
 
 interface AppModule {
@@ -100,5 +103,11 @@ class AppRunner(val appModule: () -> AppModule) : KtxApplicationAdapter {
         if (displayVisualMouse) {
             visualMouse.draw()
         }
+    }
+}
+
+fun launchApp(appModuleCreator: () -> AppModule) {
+    if(!StartOnFirstThreadHelper.startNewJvmIfRequired()){
+        Lwjgl3Application(AppRunner { appModuleCreator() }, config)
     }
 }

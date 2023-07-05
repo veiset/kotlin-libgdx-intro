@@ -1,19 +1,15 @@
 package org.veiset.libgdx.examples
 
-import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.graphics.circle
 import ktx.graphics.use
-import org.veiset.libgdx.AppModule
-import org.veiset.libgdx.AppRunner
-import org.veiset.libgdx.config
-import org.veiset.libgdx.globals
+import org.veiset.libgdx.*
 import org.veiset.libgdx.utils.math.Bezier
 import org.veiset.libgdx.utils.x
 
 fun main() {
-    Lwjgl3Application(AppRunner { BezierModule() }, config)
+    launchApp { BezierModule() }
 }
 
 class BezierModule : AppModule {
