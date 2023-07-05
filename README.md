@@ -99,3 +99,29 @@ Legg gjerne til litt ekstra features som du tenker kan være kult.
  * Se gjerne på ting i `examples`-mappen for inspirasjon til flere ting å leke seg med
 
 Legg gjerne på kule ting du kommer på, eller gå videre til neste oppgave som er litt åpen.
+
+
+## 6. Åpen oppgave
+
+Til slutt har vi en litt åpen oppgave, hvor du kan lage ditt helt eget spill. Bygg på det du lærte
+fra de andre oppgavene og se om du klarer å lage ett lite spill fra scratch. Ta gjerne kontakt med
+coachene om du sitter fast eller trenger hjelp.
+
+Forslag kan være å se på å lage noe som gamle klassikere som Pong eller Breakout. Eventuelt
+kanskje man vil forsøke seg på en egen Flappy Bird? 
+
+For å komme i gang kan du starte med å lage en fil som inneholder koden under.
+
+```kotlin
+fun main() {
+    Lwjgl3Application(AppRunner { MyGame() }, config)
+}
+
+class MyGame: AppModule {
+    override fun update(delta: Float) {
+    }
+
+    override fun draw(delta: Float) {
+    }
+}
+```

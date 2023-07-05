@@ -51,10 +51,10 @@ class DodgeFallingSqueresSolution: AppModule {
         }
 
         if (player.position.x < 0) { player.position.x = 0f }
-        if (player.position.x > EngineConfig.VIEWPORT_WIDTH) { player.position.x = EngineConfig.VIEWPORT_WIDTH.toFloat() }
+        if (player.position.x + player.size.x > EngineConfig.VIEWPORT_WIDTH) { player.position.x = EngineConfig.VIEWPORT_WIDTH - player.size.x }
 
         if (player.position.y < 0) { player.position.y = 0f }
-        if (player.position.y > EngineConfig.VIEWPORT_HEIGHT) { player.position.y = EngineConfig.VIEWPORT_HEIGHT.toFloat() }
+        if (player.position.y + player.size.y > EngineConfig.VIEWPORT_HEIGHT) { player.position.y = EngineConfig.VIEWPORT_HEIGHT - player.size.y }
     }
 
     /**
@@ -75,7 +75,7 @@ class DodgeFallingSqueresSolution: AppModule {
      */
     private fun spawnNewBlocks() {
         val position = Vector2(
-            (Math.random() * EngineConfig.VIEWPORT_WIDTH).toFloat(),
+            (Math.random() * (EngineConfig.VIEWPORT_WIDTH - 20)).toFloat(),
             EngineConfig.VIEWPORT_HEIGHT + 20f
         )
         val block = Rectangle(
