@@ -2,13 +2,13 @@ package org.veiset.libgdx.examples
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import org.veiset.libgdx.AppModule
 import org.veiset.libgdx.AppRunner
 import org.veiset.libgdx.config
 
 fun main() {
-    LwjglApplication(AppRunner { SceneManagerModule() }, config)
+    Lwjgl3Application(AppRunner { SceneManagerModule() }, config)
 }
 
 /**

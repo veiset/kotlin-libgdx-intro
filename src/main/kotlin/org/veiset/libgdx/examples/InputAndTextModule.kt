@@ -2,7 +2,7 @@ package org.veiset.libgdx.examples
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.graphics.Color
 import ktx.graphics.use
 import org.veiset.libgdx.AppModule
@@ -12,7 +12,7 @@ import org.veiset.libgdx.globals
 import org.veiset.libgdx.utils.fontWithSize
 
 fun main() {
-    LwjglApplication(AppRunner { InputAndTextModule() }, config)
+    Lwjgl3Application(AppRunner { InputAndTextModule() }, config)
 }
 
 class InputAndTextModule: AppModule {

@@ -1,7 +1,7 @@
 package org.veiset.libgdx.examples
 
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.graphics.color
@@ -14,7 +14,7 @@ import org.veiset.libgdx.utils.math.Perlin
 import kotlin.random.Random
 
 fun main() {
-    LwjglApplication(AppRunner { PerlinModule() }, config)
+    Lwjgl3Application(AppRunner { PerlinModule() }, config)
 }
 
 class PerlinModule: AppModule {

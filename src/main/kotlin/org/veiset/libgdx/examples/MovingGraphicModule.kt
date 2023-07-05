@@ -1,6 +1,6 @@
 package org.veiset.libgdx.examples
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.graphics.rect
@@ -16,7 +16,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 
 fun main() {
-    LwjglApplication(AppRunner { MovingGraphicModule() }, config)
+    Lwjgl3Application(AppRunner { MovingGraphicModule() }, config)
 }
 class MovingGraphicModule: AppModule {
     private val spriteBatch = globals.spriteBatch

@@ -1,6 +1,6 @@
 package org.veiset.libgdx.examples
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import ktx.graphics.circle
@@ -13,7 +13,7 @@ import org.veiset.libgdx.utils.math.Bezier
 import org.veiset.libgdx.utils.x
 
 fun main() {
-    LwjglApplication(AppRunner { BezierModule() }, config)
+    Lwjgl3Application(AppRunner { BezierModule() }, config)
 }
 
 class BezierModule : AppModule {

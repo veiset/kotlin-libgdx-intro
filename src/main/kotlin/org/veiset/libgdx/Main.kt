@@ -1,6 +1,6 @@
 package org.veiset.libgdx
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.Vector2
@@ -8,10 +8,9 @@ import com.badlogic.gdx.utils.TimeUtils
 import ktx.graphics.rect
 import ktx.graphics.use
 import org.veiset.libgdx.utils.Rectangle
-import org.veiset.libgdx.utils.x
 
 fun main() {
-    LwjglApplication(AppRunner { DodgeFallingSqueres() }, config)
+    Lwjgl3Application(AppRunner { DodgeFallingSqueres() }, config)
 }
 
 class DodgeFallingSqueres: AppModule {
