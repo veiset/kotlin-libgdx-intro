@@ -2,12 +2,16 @@ package org.veiset.libgdx
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
+import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import com.badlogic.gdx.math.Vector2
 import com.badlogic.gdx.utils.viewport.FitViewport
 import ktx.app.KtxApplicationAdapter
 import ktx.app.clearScreen
+import ktx.graphics.rect
+import ktx.graphics.use
 import org.veiset.libgdx.debug.FPSCounter
 import org.veiset.libgdx.debug.VisualMouse
 import kotlin.system.measureNanoTime
@@ -66,8 +70,13 @@ class AppRunner(val appModule: () -> AppModule) : KtxApplicationAdapter {
     }
 
     override fun render() {
-        clearScreen(0f, 0f, 0f)
+        clearScreen(0.05f, 0.05f, 0.6f)
         val time = measureNanoTime {
+            globals.shapeRenderer.use(ShapeRenderer.ShapeType.Filled) {
+                it.color = Color.BLACK
+                it.rect(Vector2(0f, 0f), Vector2(EngineConfig.VIEWPORT_WIDTH, EngineConfig.VIEWPORT_HEIGHT))
+            }
+
             module.update(Gdx.graphics.deltaTime)
             module.draw(Gdx.graphics.deltaTime)
         }
