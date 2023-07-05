@@ -9,9 +9,8 @@ repositories {
     mavenCentral()
 }
 
-val gdxVersion = "1.11.0"
-val ktxVersion = "1.11.0-rc2"
-val kotlinVersion = "1.6.10"
+val gdxVersion = "1.12.0"
+val ktxVersion = "1.11.0-rc6"
 
 dependencies {
     implementation(kotlin("stdlib"))
