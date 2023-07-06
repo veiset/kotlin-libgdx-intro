@@ -90,18 +90,30 @@ som er utenfor skjermen, og derfor ikke lenger er relevante for spillet.
 
 ## 6. Ekstra features?
 
-Legg gjerne til litt ekstra features som du tenker kan være kult.
-
- * Vise hvor lenge man overlevde på en "score screen" når man taper?
- * Øke vanskelighetsgraden over tid (øke tempoet på brikkene som faller, spawne flere)
- * Blokker av ulike størrelser og med ulik fart?
- * Bytte ut firkantene med bilder? (Se [MovingGraphicsModule.kt](src/main/kotlin/org/veiset/libgdx/examples/MovingGraphicModule.kt))
- * Se gjerne på ting i `examples`-mappen for inspirasjon til flere ting å leke seg med
-
-Legg gjerne på kule ting du kommer på, eller gå videre til neste oppgave som er litt åpen.
+Vi kan nå gå videre med å legge til litt fler kule features i spillet. Her er det bare å bruke kreativiteten. Men under
+kommer det noen forslag til ting man kan legge til. Se gjerne på ting i `examples`-mappen for inspirasjon til flere ting
+man kan gjøre.
 
 
-## 6. Åpen oppgave
+#### Vise gi en score til spilleren basert på hvor bra de gjorde det?
+
+Implementere en måte å gi en score til spilleren som vises når de taper. F.eks. kan scored være hvor mange sekunder man
+klarte seg. F.eks. kan denne vises midt på skjermen etter man tapte og så må man trykke på en knapp for å starte på nytt.
+
+#### Øke vanskelighetsgraden over tid
+
+En vanlig ting i slike spill er at vanskelighetsgraden øker over tid. Her er det mange ting man kan vurdere, som f.eks. 
+at man det kommer fler og fler blokker over tid. Eller at de beveger seg raskere. Kanskje de etterhvert også har ulik
+størrelse og fart?
+
+#### Bytte ut firkantene med bilder
+
+Firkanter kan være litt kjedelig. Hva om man bytter ut firkantene med noen kule bilder i stedet? Her kan man se på
+eksempelkoden [MovingGraphicsModule.kt](src/main/kotlin/org/veiset/libgdx/examples/MovingGraphicModule.kt) for hvordan
+man kan tegne grafikk på skjermen.
+
+
+## 7. Åpen oppgave
 
 Til slutt har vi en litt åpen oppgave, hvor du kan lage ditt helt eget spill. Bygg på det du lærte
 fra de andre oppgavene og se om du klarer å lage ett lite spill fra scratch. Ta gjerne kontakt med
